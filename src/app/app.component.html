@@ -1,0 +1,20 @@
+<who-am-i [name]="whoAmI" />
+<hr>
+<app-i-choose-you (choose)="onChoose($event)" [names]="candidates" />
+<hr>
+<!-- on AppComponent - choose: {{ choose }} -->
+<button (click)="onReset()" >New Game</button> | Answer:
+@if (!chooseAnimal) {
+  ❓️
+}
+@else if (chooseAnimal === whoAmI) {
+  ✅
+} @else {
+  ❌
+}
+<hr>
+<button (click)="gotoCredit()">Credit</button>
+
+
+<!-- show other page -->
+<router-outlet />

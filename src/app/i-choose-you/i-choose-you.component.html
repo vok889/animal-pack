@@ -1,0 +1,6 @@
+<!-- i-choose-you.component.html -->
+@for (name of names; track name) {
+    <img (click)="onSelect(name)" src="{{ animalPackService.getPath(name) }}" alt="{{name}}" />
+  }
+<br>
+on IChooseYouComponent - selected: {{ selected }}
