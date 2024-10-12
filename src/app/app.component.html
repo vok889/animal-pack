@@ -6,13 +6,18 @@
 <button (click)="onReset()" >New Game</button> | Answer:
 @if (!chooseAnimal) {
   ❓️
-}
-@else if (chooseAnimal === whoAmI) {
+} @else if (chooseAnimal === whoAmI) {
   ✅
 } @else {
   ❌
 }
 <hr>
+<!-- <button (click)="gotoCredit()">Credit</button> -->
+
+debug:{{director}}
+<hr>
+<label for="director">Director</label>
+<input type="text" id="director" [(ngModel)]="director">
 <button (click)="gotoCredit()">Credit</button>
 
 

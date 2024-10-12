@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WhoAmIComponent, IChooseYouComponent, DirectedByComponent],
+  imports: [RouterOutlet, WhoAmIComponent, IChooseYouComponent, DirectedByComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -24,6 +24,8 @@ export class AppComponent {
   candidates = ['bear', 'frog', 'sloth']
 
   chooseAnimal = ''
+
+  director = 'Jame H. Thiwong'
 
   constructor() {
     this.onReset();
@@ -40,7 +42,7 @@ export class AppComponent {
   }
 
   gotoCredit() {
-    this.router.navigate(['/directed-by'])
+    this.router.navigate(['/directed-by', this.director]);
   }
 
 }

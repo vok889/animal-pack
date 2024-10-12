@@ -10,5 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './directed-by.component.css'
 })
 export class DirectedByComponent {
-  director = 'Jame H. Thiwong';
+  @Input()
+  director = 'Robert B. Weide'
 }
